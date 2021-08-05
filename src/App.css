@@ -683,7 +683,7 @@ hr{
 .category_tap_multi{
 	display: grid;
   	grid-template-columns: 1fr 1fr 1fr 1fr;   	
-  	grid-gap: 10px;
+  	grid-gap: 6px;
   	padding: 0px 30px;  	
   	width: 80%;
 
@@ -696,6 +696,10 @@ hr{
 	padding: 15px;
 	position: relative;
 	cursor: pointer;	 
+}
+
+.category_tap:hover{
+	border: 1px solid #ff686e;
 }
 
 
@@ -808,4 +812,11 @@ hr{
 	color: #ff686e;
 	position: absolute;
 	right: 8px;	
+}
+
+.add_to_bag img{
+	width: 30px;
+	height: 20px;
+	position: absolute;
+	left: 10px;
 }

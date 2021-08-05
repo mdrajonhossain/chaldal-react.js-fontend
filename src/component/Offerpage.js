@@ -1,4 +1,4 @@
-
+import { Link} from "react-router-dom";
 import '../App.css';
 import Header from './header';
 import Sitebar from './sitebar';
@@ -30,35 +30,51 @@ function City() {
 			<div className="category_filter_title">Filter By Category</div>
 
 			<div className="category_tap_multi">
-				<div className="category_tap">
-					Popular(24)
-					<img src="https://chaldn.com/_mpimage/popular?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80219&q=low&v=1&m=40&webp=1&alpha=1" />
-				</div>
-				
+
+				<Link to="/populer">
+					<div className="category_tap">
+						Popular(24)
+						<img src="https://chaldn.com/_mpimage/popular?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80219&q=low&v=1&m=40&webp=1&alpha=1" />
+					</div>
+				</Link>
+
+				<Link to="/hyginene">
 				<div className="category_tap">
 					Hyginene(25)
 					<img src="https://chaldn.com/_mpimage/hygiene?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80229&q=low&v=1&m=40&webp=1&alpha=1" />
 				</div>
-				
+				</Link>
+
+				<Link to="/babycare">
 				<div className="category_tap">
 					Baby Care(26)
 					<img src="https://chaldn.com/_mpimage/baby-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80247&q=low&v=1&m=40&webp=1&alpha=1" />
 				</div>
+				</Link>
+
 				
+				<Link to="/petcare">
 				<div className="category_tap">
 					Pet Care(27)
 					<img src="https://chaldn.com/_mpimage/pet-care?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80246&q=low&v=1&m=40&webp=1&alpha=1" />
 				</div>
+				</Link>
+
 				
+				<Link to="/food">
 				<div className="category_tap">
 					Food(28)
 					<img src="https://chaldn.com/_mpimage/food?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80241&q=low&v=1&m=40&webp=1&alpha=1" />
 				</div>
+				</Link>
 				
+
+				<Link to="/homecleaning">
 				<div className="category_tap">
 					Home & Cleaning(29)
 					<img src="https://chaldn.com/_mpimage/home-cleaning?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D80249&q=low&v=1&m=40&webp=1&alpha=1" />
 				</div>
+				</Link>
 			</div>
 			<hr style={{width:'95%'}}/>
 
@@ -83,13 +99,16 @@ function City() {
 					<div className="kg50">Mango Aamrapali + 50kg</div>
 					<div className="kg">3Kg</div>
 					<div className="price">৳ 550/- </div><br/><br/>
-					<div className="add_to_bag" onClick={()=>addtobag()}>Add to Bag</div>
+					
+					<div className="add_to_bag" onClick={()=>addtobag()}>
+						<img src="./image/miniimg/adtobagpic.JPG"/>Add to Bag
+					</div>
 				</div>
 			</div>
 
 			
 
-			<div className="ss" style={{height:'500px'}}>asdfasdfxe</div>
+			<div className="ss" style={{height:'500px'}}>Only height</div>
 
 
 
