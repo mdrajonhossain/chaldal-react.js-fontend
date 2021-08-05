@@ -77,6 +77,8 @@ function City() {
 
 
 				<div className="offer_product">
+					<div className="addcard_border_shadow">Add to Shopping Bag</div>
+					<div className="details" onClick={()=>addtobag()}>Details></div>
 					<img src="./image/minimango.webp"/>
 					<div className="kg50">Mango Aamrapali + 50kg</div>
 					<div className="kg">3Kg</div>
@@ -87,7 +89,7 @@ function City() {
 
 			
 
-			<div className="ss" style={{height:'500px'}}>asdfasdf</div>
+			<div className="ss" style={{height:'500px'}}>asdfasdfxe</div>
 
 
 
