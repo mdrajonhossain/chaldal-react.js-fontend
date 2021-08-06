@@ -1,12 +1,13 @@
 
-import '../App.css';
 import {  BrowserRouter as Router,  Switch,  Route,  Link} from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
+import '../App.css';
 
 
 
-function Header() {
+function Header({singleproduct, detailsshow, setDetailsshow}) {
   const [count, setCount] = useState(false);
+  const [productdetails, setProductdetails] = useState(false);
 
  
 	const showhiden = () => {
@@ -18,6 +19,8 @@ function Header() {
   }
 }
  
+
+
  
 
   return (
@@ -107,8 +110,10 @@ function Header() {
 
     <div className="producttoggle">
       <img src="./image/miniimg/item.JPG"/>
-      <span>ট 0</span>
+      <span>ট {singleproduct}</span>
     </div>
+
+
 
 {count ? 
     <div className="loginsystem">
@@ -140,6 +145,20 @@ function Header() {
 
     </div>
 :""}
+
+{detailsshow ?
+<div className="product_details_toggle">
+    <div className="productdetails_close" onClick={()=>setDetailsshow(!detailsshow)}>&times;</div>
+    
+    <div className="details_toggle_product">
+      <span>Goalini Full Cream Milk Powder</span>
+      <div style={{fontSize:'14px'}}>1 Kg</div>
+    </div>
+
+
+</div>
+:""}
+
 
   </div>  
 

@@ -2,8 +2,9 @@ import { Link} from "react-router-dom";
 import '../App.css';
 import Header from './header';
 import Sitebar from './sitebar';
+import data from './Static_Object';
 
-function City() {
+function Offerpage() {
 
  
 	const addtobag = ()=> {
@@ -84,35 +85,34 @@ function City() {
 
 
 
-
-
-			<div className="special_offer_product">
-				<div className="offer_product_img">
-					<img src="./image/mango-aamropali-net-weight-50-gm-3-kg.webp"/>
-				</div>
-
-
-				<div className="offer_product">
-					<div className="addcard_border_shadow">Add to Shopping Bag</div>
-					<div className="details" onClick={()=>addtobag()}>Details></div>
-					<img src="./image/minimango.webp"/>
-					<div className="kg50">Mango Aamrapali + 50kg</div>
-					<div className="kg">3Kg</div>
-					<div className="price">৳ 550/- </div><br/><br/>
-					
-					<div className="add_to_bag" onClick={()=>addtobag()}>
-						<img src="./image/miniimg/adtobagpic.JPG"/>Add to Bag
+	{
+		data.map((dataf)=>{
+			return (
+				<div className="special_offer_product">
+					<div className="offer_product_img">
+						<img src="./image/mango-aamropali-net-weight-50-gm-3-kg.webp"/>
 					</div>
+
+
+					<div className="offer_product">
+						<div className="addcard_border_shadow">{dataf.name}</div>
+						<div className="details" onClick={()=>addtobag()}>Details></div>
+						<img src="./image/minimango.webp"/>
+						<div className="kg50">Mango Aamrapali + 50kg</div>
+						<div className="kg">3Kg</div>
+						<div className="price">৳ 550/- </div><br/><br/>
+						
+						<div className="add_to_bag" onClick={()=>addtobag()}>
+							<img src="./image/miniimg/adtobagpic.JPG"/>Add to Bag
+						</div>
+					</div>				
 				</div>
-			</div>
-
-			
-
-			<div className="ss" style={{height:'500px'}}>Only height</div>
+			)
+		})
+	}
 
 
-
-
+			<div className="ss" style={{height:'100px'}}></div>
 
 
 
@@ -135,4 +135,4 @@ function City() {
   );
 }
 
-export default City;
+export default Offerpage;
