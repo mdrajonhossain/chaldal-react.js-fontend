@@ -17,7 +17,6 @@ function Populer() {
  	 setSingleproductt(newdata);
  }
 
-
 	
 
   return (

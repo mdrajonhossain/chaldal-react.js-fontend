@@ -8,6 +8,7 @@ import '../App.css';
 function Header({singleproductt, detailsshow, setDetailsshow}) {
   const [count, setCount] = useState(false);
   const [totalsome, setTotalsome] = useState();
+  const [itemlogsitetab, setItemlogsitetab] = useState(false);
   
 
  
@@ -19,16 +20,16 @@ function Header({singleproductt, detailsshow, setDetailsshow}) {
     x.style.display = "none";    
   }
 }
+
  
 const name = window.$name;
 
 useEffect(()=>{
-
  var msgTotal = singleproductt && singleproductt.reduce(function(prev, cur) {
-  return prev + cur.price;
-}, 0);
-  setTotalsome(msgTotal)
- console.log(msgTotal);
+    return prev + cur.price;
+  },0);
+    setTotalsome(msgTotal)
+    console.log(msgTotal);
 })
  
 
@@ -117,7 +118,7 @@ useEffect(()=>{
     </div>
 
 
-    <div className="producttoggle">
+    <div className="producttoggle" onClick={()=>setItemlogsitetab(!itemlogsitetab)}>
       <div className="item">
         <img src="./image/miniimg/item.JPG"/>
         <div className="counitem">{singleproductt ? singleproductt.length : "0"} Item</div>
@@ -163,13 +164,30 @@ useEffect(()=>{
 
 {detailsshow ?
 <div className="product_details_toggle">
-    <div className="productdetails_close" onClick={()=>setDetailsshow(!detailsshow)}>&times;</div>
-    
+    <div className="productdetails_close" onClick={()=>setDetailsshow(!detailsshow)}>&times;</div>    
     <div className="details_toggle_product">
       <span>Goalini Full Cream Milk Powder</span>
       <div style={{fontSize:'14px'}}>1 Kg</div>
     </div>
 
+
+</div>
+:""}
+
+{itemlogsitetab ? 
+<div className="item_log_site_tab">
+  <div className="item_log_site_tab_closee" onClick={()=>setItemlogsitetab(!itemlogsitetab)}>Close</div>
+  {
+    singleproductt && singleproductt.map((data)=>{
+      return(
+        <div className="item_log_site_tab_product_map">
+            <div className="item_log_site_tab_product_list">
+              <img src={data.imageurl} />{data.productname}            
+            </div>
+        </div>
+      )
+    })
+  }
 
 </div>
 :""}

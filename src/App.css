@@ -51,6 +51,37 @@ a {
 	font-size: 15px;
 }
 
+.item_log_site_tab{
+	position: absolute;
+	background: white;	
+	z-index: 5;
+	width: 290px;
+	height: 92vh;
+	right: 0px;
+	box-shadow: -9px 7px 13px 15px #e5ececb0, 3px 3px 0 0 #eef3f3cf inset;
+}
+
+.item_log_site_tab_closee{
+	font-size: 15px;
+	position: absolute;
+	right: 5px;	
+	width: 50px;
+	top: 5px;
+	background: lightgray;
+	cursor: pointer;		
+	text-align: center;
+	justify-content: center;	
+	border: 1px solid black;	
+}
+.item_log_site_tab_product_map{	
+	padding: 0px 0px 5px 30px;	
+}
+.item_log_site_tab_product_list img{
+	width: 25px;
+	height: 20px;	
+	padding: 2px;
+}
+
 .egg{
 	cursor: pointer;
 }
@@ -61,7 +92,6 @@ a {
 	width: 100%;
 }
 
- 
 
 .sitebar{ 
 	height: 100vh;
@@ -167,6 +197,7 @@ body{
 	margin-top: 60px;	
 	width: 100%;
 	height: calc(100vh - 55px);	
+	position: relative;
 }
 
 
