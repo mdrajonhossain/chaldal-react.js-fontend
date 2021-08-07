@@ -17,28 +17,39 @@ a {
 }
 
 .producttoggle{
-	width: 70px;
-	background: #f8fdf1;
+	width: 80px;	
 	z-index: 10;
 	position: fixed;	
 	top: 260px;	
 	right: 20px;
 	cursor: pointer;	
+	box-shadow: 4px 0px 12px 9px #738888b0, 3px 3px 0 0 #b5bfbfcf inset;
+}
+.item{
+	background: #55584d;
+	height: 55px;
+	padding-top: 5px;
+	text-align: center;
+	color: #fdd670;
+}
+.item img{
+	width: 18px;
+	height: 23px;	
+	
+}
+.counitem{	
+	font-size: 16px;	
 }
 
-.producttoggle img{
-	width: 70px;	
-	height: 50px;
+.pro_price{
+	background: #e6dfdffa;
+	height: 25px;
 }
-
-.producttoggle span{	
-	color: black; 	
+.tot_price{
+	color: black;
+	text-align: center;
 	font-size: 15px;
-	padding-left: 25px;
-
-	 
 }
-
 
 .egg{
 	cursor: pointer;

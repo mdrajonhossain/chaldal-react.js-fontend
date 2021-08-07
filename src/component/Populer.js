@@ -7,20 +7,24 @@ import React, { useState } from 'react';
 
 function Populer() {
 	const [detailsshow, setDetailsshow] = useState(false);
-	const [singleproduct, setSingleproduct] = useState([]);
 
  
- const addcard = (e)=>{ 	
- 	console.log(e+1);
- 	setSingleproduct(e+1)
+	const [singleproductt, setSingleproductt] = useState([]);
+
+ 
+ const addcard = (event)=>{ 
+ 	 const newdata = [...singleproductt, event];
+ 	 setSingleproductt(newdata);
  }
+
+
 	
 
   return (
       <div className="">
 		
 		<Header 
-			singleproduct={singleproduct} 
+			singleproductt={singleproductt}			 
 			detailsshow={detailsshow} 
 			setDetailsshow={setDetailsshow}
 		/>
@@ -53,7 +57,7 @@ function Populer() {
 							<div className="product_name">{propluerdata.productname}</div>
 							<div className="popular_kg">1 Kg</div>
 							<div className="popular_price">৳ {propluerdata.price}</div>
-							<div className="popular_add_bag" onClick={()=>addcard(index)}>Add Soppping Bag</div>
+							<div className="popular_add_bag" onClick={()=>addcard(propluerdata)}>Add Soppping Bag</div>
 
 							<div className="popular_add_soppping_bag">{propluerdata.name}</div>
 							<div className="popular_details" onClick={()=>setDetailsshow(!detailsshow)}>Details ></div>

@@ -5,9 +5,10 @@ import '../App.css';
 
 
 
-function Header({singleproduct, detailsshow, setDetailsshow}) {
+function Header({singleproductt, detailsshow, setDetailsshow}) {
   const [count, setCount] = useState(false);
-  const [productdetails, setProductdetails] = useState(false);
+  const [totalsome, setTotalsome] = useState();
+  
 
  
 	const showhiden = () => {
@@ -19,8 +20,16 @@ function Header({singleproduct, detailsshow, setDetailsshow}) {
   }
 }
  
+const name = window.$name;
 
+useEffect(()=>{
 
+ var msgTotal = singleproductt && singleproductt.reduce(function(prev, cur) {
+  return prev + cur.price;
+}, 0);
+  setTotalsome(msgTotal)
+ console.log(msgTotal);
+})
  
 
   return (
@@ -97,7 +106,7 @@ function Header({singleproduct, detailsshow, setDetailsshow}) {
                     <p className data-reactid=".s91vo0xg3o.4.0.0.0.6.2">&nbsp;বাং</p>
                   </div>
                   <div className="loginArea authButtons area hidden-xs" data-reactid=".s91vo0xg3o.4.0.0.0.7">
-                    <button className="signInBtn" data-reactid=".s91vo0xg3o.4.0.0.0.7.0" onClick={()=>setCount(!count)}>Sign in</button>
+                    <button className="signInBtn" data-reactid=".s91vo0xg3o.4.0.0.0.7.0" onClick={()=>setCount(!count)}>{name}</button>
                   </div>
                   <div className="mui" data-reactid=".s91vo0xg3o.4.0.0.0.8" />
                 </div></div></div></div></div>
@@ -109,8 +118,14 @@ function Header({singleproduct, detailsshow, setDetailsshow}) {
 
 
     <div className="producttoggle">
-      <img src="./image/miniimg/item.JPG"/>
-      <span>ট {singleproduct}</span>
+      <div className="item">
+        <img src="./image/miniimg/item.JPG"/>
+        <div className="counitem">{singleproductt ? singleproductt.length : "0"} Item</div>
+      </div>  
+      
+      <div className="pro_price">
+        <div className="tot_price">{totalsome ? totalsome : "0"}&nbsp;Price</div>
+      </div>
     </div>
 
 
